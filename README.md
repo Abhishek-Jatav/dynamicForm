@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# 📝 Dynamic Question Form Builder
 
-First, run the development server:
+[![Next.js](https://img.shields.io/badge/Next.js-13-blue?logo=next.js&logoColor=white)](https://nextjs.org/)  
+[![React](https://img.shields.io/badge/React-18-blue?logo=react&logoColor=white)](https://reactjs.org/)  
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+
+A **dynamic, hierarchical question form builder** built with **Next.js** and **React**.  
+Easily create parent and child questions, auto-number them, and view the final structure in a **read-only hierarchical display**.  
+
+---
+
+## ✨ Features
+
+- ✅ **Add Parent Questions** dynamically  
+- ✅ **Nested Child Questions** based on True/False answers  
+- ✅ **Recursive Structure** allows unlimited depth  
+- ✅ **Auto-Numbering** for hierarchical questions (`Q1`, `Q1.1`, `Q1.1.1`)  
+- ✅ **Delete Functionality** removes questions and all their children  
+- ✅ **Form Submission** displays a **read-only hierarchical view**  
+
+---
+
+## 📁 Project Structure
+
+```
+
+dynamicForm/
+├── src/
+│   ├── app/
+│   │   └── page.js          # Main page with form logic
+│   ├── components/
+│   │   ├── QuestionForm.js  # Recursive question form component
+│   │   └── DisplayQuestions.js # Read-only display after submit
+├── package.json
+├── README.md
+└── ... (Next.js default files)
+
+````
+
+---
+
+## 🚀 Demo Workflow
+
+1. Click **“Add New Question”** to create a parent question.  
+2. Enter **question text** and select **question type** (`Short Answer` or `True/False`).  
+3. For **True/False** questions:
+   - If answer is **True**, click **“Add Child Question”** to create nested questions.  
+4. Click **Delete** to remove any question along with its nested children.  
+5. Click **Submit** to see the **hierarchical read-only display**.
+
+---
+
+## 💻 Setup & Installation
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/Abhishek-Jatav/dynamicForm.git
+cd dynamicForm
+````
+
+### 2️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+### 3️⃣ Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🖼 Screenshots
 
-## Learn More
+### Form Builder
 
-To learn more about Next.js, take a look at the following resources:
+![Form Builder Screenshot](screenshots/form-builder.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Submitted Hierarchical View
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+![Submitted View Screenshot](screenshots/submitted-view.png)
 
-## Deploy on Vercel
+> *(Optional: add screenshots in `/screenshots` folder for better presentation)*
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ⚙️ Tech Stack
+
+* **Next.js 13 (App Router)**
+* **React 18**
+* **CSS / Inline Styling**
+* Fully **client-side**, no backend/API required
+
+---
+
+## 📌 Notes
+
+* Recursive state structure supports **unlimited nested child questions**.
+* Auto-numbering updates automatically when **adding or deleting** questions.
+* Read-only display ensures **submitted data is visible but not editable**.
+
+---
+
+## 📝 License
+
+This project is licensed under **MIT License**.
